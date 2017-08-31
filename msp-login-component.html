@@ -1,0 +1,255 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="msp-login-component">
+  <template>
+    <style>
+
+
+      element.style {
+        padding: 10px;
+      }
+      /*cards.less:5*/
+      div.cyclops .card {
+        position: relative;
+        margin-bottom: 20px;
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        box-shadow: 0 0 2px 0 rgba(0,0,0,.08);
+      }
+      /*grid.less:12*/
+      div.cyclops *, div.cyclops :after, div.cyclops :before {
+        box-sizing: border-box;
+      }
+      div {
+        display: block;
+      }
+      div.cyclops body {
+        font-weight: 400;
+        font-size: 14px;
+        color: #333;
+        line-height: 20px;
+        text-rendering: optimizeLegibility;
+      }
+      /*type.less:166*/
+      div.cyclops .btn, div.cyclops body {
+        font-family: "Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Sans-Serif;
+      }
+    body {
+    font-family: Open Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Sans-Serif;
+    }
+
+      div.cyclops .btn-block {
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        box-sizing: border-box;
+      }
+      div.cyclops .btn-large, div.cyclops .btn-lg {
+        border-radius: 3px;
+        font-size: 15px;
+        line-height: 20px;
+        padding: 6px 10px 9px;
+      }
+      div.cyclops .btn {
+        background: 0 0;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        box-shadow: 0 1px 1px rgba(0,0,0,.04);
+        color: #333;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 20px;
+        padding: 4px 9px;
+        cursor: pointer;
+        text-shadow: none;
+        text-decoration: none;
+      }
+      div.cyclops .btn-primary {
+        color: #fff;
+        background-color: #3cac30;
+        border-color: #3cac30;
+      }
+      div.cyclops .btn, div.cyclops div.dropdown {
+        display: inline-block;
+      }
+      div.cyclops .btn, div.cyclops body {
+        font-family: "Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Sans-Serif;
+      }
+      div.cyclops .btn, div.cyclops .btn .cyclops-icon {
+        transition: all .15s ease-in-out;
+      }
+      div.cyclops button, div.cyclops html input[type=button], div.cyclops input[type=reset], div.cyclops input[type=submit] {
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        cursor: pointer;
+      }
+      div.cyclops button, div.cyclops select {
+        text-transform: none;
+      }
+      div.cyclops button {
+        overflow: visible;
+      }
+      div.cyclops button, div.cyclops input, div.cyclops optgroup, div.cyclops select, div.cyclops textarea {
+        color: inherit;
+        font: inherit;
+        margin: 0;
+      }
+      div.cyclops *, div.cyclops :after, div.cyclops :before {
+        box-sizing: border-box;
+      }
+
+      div.cyclops .form-control {
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #d5d5d5;
+        border-radius: 4px;
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        vertical-align: bottom;
+        /*margin-top: 20px;*/
+      }
+      div.cyclops input {
+        line-height: normal;
+      }
+      div.cyclops button, div.cyclops input, div.cyclops optgroup, div.cyclops select, div.cyclops textarea {
+        color: inherit;
+        font: inherit;
+        margin: 0;
+      }
+      div.cyclops *, div.cyclops :after, div.cyclops :before {
+        box-sizing: border-box;
+      }
+
+      div.cyclops .sr-only {
+        position: absolute!important;
+        clip: rect(1px 1px 1px 1px);
+        clip: rect(1px,1px,1px,1px);
+        padding: 0!important;
+        border: 0!important;
+        height: 1px!important;
+        width: 1px!important;
+        overflow: hidden;
+      }
+      div.cyclops .sr-only {
+        margin: -1px;
+      }
+      div.cyclops label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: 400;
+      }
+      div.cyclops *, div.cyclops :after, div.cyclops :before {
+        box-sizing: border-box;
+      }
+      label {
+        cursor: default;
+      }
+      div.cyclops body {
+        font-weight: 400;
+        font-size: 14px;
+        color: #333;
+        line-height: 20px;
+        text-rendering: optimizeLegibility;
+      }
+
+      div.cyclops *, div.cyclops ::after, div.cyclops ::before {
+        box-sizing: border-box;
+      }
+      div.cyclops a {
+        color: rgb(51, 51, 51);
+        background-color: transparent
+      }
+      a:-webkit-any-link {
+        color: -webkit-link;
+        cursor: auto;
+        text-decoration: underline;
+      }
+
+      div.cyclops .form-signin .form-group {
+        margin-bottom: 15px;
+      }
+
+      div.cyclops .checkbox, div.cyclops .radio {
+        position: relative;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+
+
+    </style>
+
+
+
+    <div class="cyclops">
+      <div class="card" style="padding: 10px;">
+        <div class="card-block"><span></span>
+          <form class="form-signin">
+            <div class="form-group"><label for="username" class="sr-only">Username</label><input type="text" id="username"
+                                                                                                 class="form-control"
+                                                                                                 value=""
+                                                                                                 placeholder="Username"
+                                                                                                 name="username"></div>
+            <div class="form-group"><label for="password" class="sr-only">Password</label><input type="password"
+                                                                                                 id="password"
+                                                                                                 class="form-control"
+                                                                                                 value=""
+                                                                                                 placeholder="Password"
+                                                                                                 name="password"></div>
+            <div class="form-group form-submit">
+              <div class="checkbox"><label for="remember-me"><input type="checkbox" value="remember-me" id="remember-me"
+                                                                    name="remember-me"><!-- react-text: 118 --> remember
+                me<!-- /react-text --></label></div>
+              <div id="signin-btn" aria-hidden="true" aria-live="assertive" class="sr-only"></div>
+              <button aria-describedby="signin-btn" class="btn btn-lg btn-primary btn-block" type="button" value=""
+                      id="signin"><!-- react-text: 121 -->sign in <!-- /react-text --></button>
+            </div>
+          </form>
+          <div class="signin-support">
+            <div class="row"><span class="col-xs-12 col-sm-12 col-md-6"><span aria-hidden="true"><!-- react-text: 126 -->Forgot your
+              <!-- /react-text --><a href="#">password</a><!-- react-text: 128 --> or <!-- /react-text --><a href="#">username</a>
+              <!-- react-text: 130 -->?<!-- /react-text --></span><a class="sr-only">Forgot password</a><a
+                    class="sr-only">Forgot username</a></span><span class="col-xs-12 col-sm-12 col-md-6 text-right"><a
+                    href="https://www.ctl.io/legal/privacy/">Privacy Policy</a></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    /**
+     * `msp-login-component`
+     * msp-login
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class MspLoginComponent extends Polymer.Element {
+      static get is() { return 'msp-login-component'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'msp-login-component'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MspLoginComponent.is, MspLoginComponent);
+  </script>
+</dom-module>
